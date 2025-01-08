@@ -1,1 +1,99 @@
 @use "asset" as *;
+#wrap{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    .content{
+        border-radius: 32px;
+        box-shadow: 0px 0px 15px -5px #777777;
+        width: 390px;
+        height: 750px;
+        background-image: url("../img/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        .header{
+            width: 100%;
+            position: absolute;
+            top: 32px;
+            display: flex;
+            justify-content: center;
+            .tyokin{
+                width: 280px;
+                height: 50px;
+                border: solid 3px #000;
+                border-radius: 10px;
+                background-color: rgb(255, 255, 255,0.5);
+                text-align: right;
+                font-size: 3rem;
+                line-height: 50px;
+            }
+        }
+        .pig-wrap{
+            position: absolute;
+            height: 320px;
+            width: 320px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateY(120px);
+            margin: auto;
+            .pig{
+                width: 100%;
+                animation-name: pigAnime;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+        .saihu-wrap{
+            position: absolute;
+            bottom: 88px;
+            right: 24px;
+            width: 80px;
+            height: 80px;
+            .saihu{
+                cursor: pointer;
+                width: 100%;
+            }
+        }
+        .tyokin-wrap{
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .money{
+                padding: 24px;
+                border: solid 3px #000;
+                background: #E7D9BE;
+            }
+        }
+        .tyokin-wrap.active{
+            opacity: 1;
+        }
+    }
+}
+
+
+@keyframes pigAnime{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

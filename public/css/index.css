@@ -4518,4 +4518,102 @@ readers do not read off random characters that represent icons */
 .far {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+
+#wrap {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+#wrap .content {
+  border-radius: 32px;
+  box-shadow: 0px 0px 15px -5px #777777;
+  width: 390px;
+  height: 750px;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+#wrap .content .header {
+  width: 100%;
+  position: absolute;
+  top: 32px;
+  display: flex;
+  justify-content: center;
+}
+#wrap .content .header .tyokin {
+  width: 280px;
+  height: 50px;
+  border: solid 3px #000;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  font-size: 3rem;
+  line-height: 50px;
+}
+#wrap .content .pig-wrap {
+  position: absolute;
+  height: 320px;
+  width: 320px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateY(120px);
+  margin: auto;
+}
+#wrap .content .pig-wrap .pig {
+  width: 100%;
+  animation-name: pigAnime;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#wrap .content .saihu-wrap {
+  position: absolute;
+  bottom: 88px;
+  right: 24px;
+  width: 80px;
+  height: 80px;
+}
+#wrap .content .saihu-wrap .saihu {
+  cursor: pointer;
+  width: 100%;
+}
+#wrap .content .tyokin-wrap {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap .content .tyokin-wrap .money {
+  padding: 24px;
+  border: solid 3px #000;
+  background: #E7D9BE;
+}
+#wrap .content .tyokin-wrap.active {
+  opacity: 1;
+}
+
+@keyframes pigAnime {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=index.css.map */
