@@ -4571,8 +4571,10 @@ readers do not read off random characters that represent icons */
 #wrap .content .pig-wrap .pig {
   width: 100%;
   animation-name: pigAnime;
-  animation-duration: 2s;
+  animation-duration: 24s;
   animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 #wrap .content .saihu-wrap {
   position: absolute;
@@ -4586,34 +4588,61 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 #wrap .content .tyokin-wrap {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
   background-color: #fff;
-  z-index: 9999;
+  z-index: -9999;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+#wrap .content .tyokin-wrap .tyokin {
+  width: 280px;
+  height: 50px;
+  border: solid 3px #000;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  font-size: 3rem;
+  line-height: 50px;
 }
 #wrap .content .tyokin-wrap .money {
   padding: 24px;
   border: solid 3px #000;
+  border-radius: 8px;
   background: #E7D9BE;
+  display: grid;
+  grid-template-columns: repeat(2, 80px) 140px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 10px;
 }
 #wrap .content .tyokin-wrap.active {
   opacity: 1;
+  z-index: 9999;
 }
 
 @keyframes pigAnime {
   0% {
     transform: translateX(0px);
   }
-  50% {
+  24% {
     transform: translateX(-100px);
   }
+  25% {
+    transform: translateX(-100px) scaleX(-1);
+  }
+  74% {
+    transform: translateX(100px) scaleX(-1);
+  }
+  75% {
+    transform: translateX(100px) scaleX(1);
+  }
   100% {
-    transform: translateX(0px);
+    transform: translateX(0px) scaleX(1);
   }
 }/*# sourceMappingURL=index.css.map */

@@ -1,3 +1,4 @@
+// 貯金箱をクリックした時の処理
 const saihu = document.getElementById('saihu');
 
 console.log(saihu);
